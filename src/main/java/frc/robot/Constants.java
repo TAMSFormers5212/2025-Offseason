@@ -19,4 +19,25 @@ public final class Constants
     {
         public static final int DRIVER_CONTROLLER_PORT = 0;
     }
+
+
+    public static class ElevatorConstants
+    {
+        public static final int leftMotor = 10;
+        public static final int rightMotor = 11;
+
+        public static final int limitSwitch = 9;
+        public static final int encoderOne = 7;
+        public static final int encoderTwo = 5;
+
+        public static final double sourceIntakeHeight = 2.38;
+        public static final double levelTwoHeight = 8.44;
+        public static final double levelThreeHeight = 17.34;
+        public static final double levelFourthHeight = 33.46;
+
+        public static final double elevatorOffset = 0;
+
+
+    }
+
 }
