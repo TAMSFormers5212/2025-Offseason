@@ -17,7 +17,7 @@ public class ExampleSubsystem extends SubsystemBase
     
     
     /**
-     * Example command factory method.
+     * Example command factory methoda.
      *
      * @return a command
      */
