@@ -21,7 +21,7 @@ public class Robot extends TimedRobot
     private Command autonomousCommand;
     
     private final RobotContainer robotContainer;
-    
+    private final int YEAH_BABY = 8;
     
     /**
      * This method is run when the robot is first started up and should be used for any
