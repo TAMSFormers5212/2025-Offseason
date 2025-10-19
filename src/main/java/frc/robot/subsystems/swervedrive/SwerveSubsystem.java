@@ -1,15 +1,18 @@
 package frc.robot.subsystems.swervedrive;
 
+import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
+import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import java.io.File;
 import java.io.IOException;
 import java.util.function.DoubleSupplier;
+import java.util.function.Supplier;
 
 import edu.wpi.first.wpilibj.Filesystem;
-import frc.robot.Constants;
+import frc.robot.Robot;
 import swervelib.math.SwerveMath;
 import swervelib.parser.SwerveParser;
 import swervelib.SwerveDrive;
@@ -27,6 +30,9 @@ import swervelib.telemetry.SwerveDriveTelemetry.TelemetryVerbosity;
 public class SwerveSubsystem extends SubsystemBase {
     double maximumSpeed = Units.feetToMeters(4.5);
     SwerveDrive  swerveDrive;
+    /**
+     * PhotonVision class to keep an accurate odometry.
+     */
 
     public SwerveSubsystem(File directory) throws IOException {
         SwerveDriveTelemetry.verbosity = TelemetryVerbosity.HIGH;
